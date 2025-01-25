@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+// Body Copy
+$body-text: 16px;
+$small-text: 12px;
+
+// Font
+$primary-font: "Roboto", sans-serif;
+$body-weight: 400;
+$bold-weight: 700;
+
+// Primary
+$primary-color: hsl(4, 100%, 67%);
+$secondary-color: hsl(234, 29%, 20%);
+
+// Neutral
+$dark-slate: hsl(234, 29%, 20%);
+$charcoal: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+// Used in Mixin for page breakpoints
+$breakpoints: (
+    lg: 769px,
+);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $body-text;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $secondary-color;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    margin: 0;
+}
+
+p,
+a {
+    font-size: $body-text;
+    font-family: $primary-font;
+    font-weight: $body-weight;
+    margin: unset;
+}
+
+%h1 {
+    font-size: 2.5rem;
+    font-weight: $bold-weight;
+    font-family: $primary-font;
+    margin: unset;
+    letter-spacing: 1.2px;
+
+    @include break(lg) {
+        font-size: 3.5rem;
+    }
+}
+
+%h2 {
+    font-size: 2.5rem;
+    font-weight: $bold-weight;
+    font-family: $primary-font;
+    margin: unset;
+    letter-spacing: 1.2px;
+    line-height: 1;
+}
+
+h1 {
+    @extend %h1;
+}
+h2 {
+    @extend %h2;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include break(lg) {
+        min-height: 100vh;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: $white;
+
+    a {
+        color: $primary-color;
+    }
+}

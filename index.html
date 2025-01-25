@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer type="module" src="./js/emailValidation.js"></script>
+  <script defer type="module" src="./js/signupHandling.js"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+  <!-- Sign-up form start -->
+  <main>
+    <div class="signup-form">
+      <picture class="signup-form-image">
+        <img class="desktop-image" src="/assets/images/illustration-sign-up-desktop.svg"
+          alt="Desktop illustration image">
+        <img class="mobile-image" src="/assets/images/illustration-sign-up-mobile.svg" alt="Mobile illustration image">
+      </picture>
+      <div class="signup-form-wrapper">
+        <div class="signup-form-content">
+          <h1 class="signup-form-title">Stay updated!</h1>
+
+          <p class="signup-form-subtitle">Join 60,000+ product managers receiving monthly updates on:</p>
+
+          <ul class="signup-form-list">
+            <li><img src="/assets/images/icon-list.svg" alt="orange tick icon">
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li><img src="/assets/images/icon-list.svg" alt="orange tick icon">
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li><img src="/assets/images/icon-list.svg" alt="orange tick icon">
+              <p>And much more!</p>
+            </li>
+          </ul>
+          <form class="signup-form-email">
+            <fieldset class="signup-form-email-wrapper">
+              <label for="email">Email address</label>
+              <div class="signup-form-email__messages"></div>
+              <input type="text" id="email" name="email" placeholder="email@company.com">
+            </fieldset>
+            <fieldset>
+              <button type="submit">Subscribe to monthly newsletter</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign-up form end -->
+
+
+    <!-- Success message start -->
+    <dialog>
+      <div class="success-modal">
+        <img src="/assets/images/icon-list.svg" alt="orange tick icon">
+        <h2>Thanks for subscribing!</h2>
+
+        <p>A confirmation email has been sent to <b class="email-address">ash@loremcompany.com.</b>
+          Please open it and click the button inside to confirm your subscription.</p>
+        <form>
+          <button autofocus>Dismiss message</button>
+        </form>
+      </div>
+    </dialog>
+    <!-- Success message end -->
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/awaritefe">Daniel Tefe</a>.
+    </footer>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+.signup-form {
+    background-color: $white;
+    max-width: 23rem;
+
+    @include break(lg) {
+        border-radius: 36px;
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: unset;
+        padding: 1rem;
+        max-width: 51rem;
+        max-height: 33rem;
+    }
+
+    &-image {
+        display: grid;
+        overflow: hidden;
+        border-radius: 0 0 1rem 1rem;
+        .desktop-image {
+            display: none;
+        }
+
+        @include break(lg) {
+            border-radius: 1.5rem;
+            .mobile-image {
+                display: none;
+            }
+
+            .desktop-image {
+                display: block;
+            }
+        }
+
+        img {
+            width: 100%;
+
+            @include break(lg) {
+                height: 100%;
+            }
+        }
+    }
+
+    &-wrapper {
+        align-content: center;
+    }
+
+    &-content {
+        display: grid;
+        height: fit-content;
+        row-gap: 1rem;
+        padding: 1.25rem 1rem 2rem;
+
+        @include break(lg) {
+            padding: 0 3rem 0 2rem;
+            row-gap: 0.5rem;
+        }
+    }
+
+    &-title {
+        margin-bottom: 0.5rem;
+
+        @include break(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    &-list {
+        display: grid;
+        row-gap: 0.75rem;
+        padding: 0;
+        margin: 1rem 0 1.5rem;
+        li {
+            align-items: start;
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+    }
+
+    &-email {
+        &-wrapper {
+            position: relative;
+        }
+        &__messages {
+            color: $primary-color;
+            font-size: $small-text;
+            font-weight: $bold-weight;
+            position: absolute;
+            right: 0;
+        }
+
+        fieldset {
+            display: grid;
+            gap: 0.5rem;
+            padding: 0;
+            border: none;
+        }
+
+        label {
+            font-size: $small-text;
+            font-weight: $bold-weight;
+        }
+        input {
+            border: 1px solid $grey;
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        input.error-message {
+            border: 1px solid $primary-color !important;
+            background-color: hsl(4, 100%, 67%, 15%) !important;
+        }
+    }
+}
+.signup-form-email input.errorMessage {
+    border: 1px solid $primary-color !important;
+    background-color: hsl(4, 100%, 67%, 15%) !important;
+
+    &::placeholder {
+        color: $primary-color;
+    }
+}
